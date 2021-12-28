@@ -5,12 +5,12 @@ USE developerTeam;
 
 CREATE TABLE department(
     id INT AUTO_INCREMENT,
-    roles_id INT,
+    title_id INT,
     department_name VARCHAR(30) NOT NULL,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE roles(
+CREATE TABLE title(
     id INT AUTO_INCREMENT,
     title VARCHAR(30),
     salary DECIMAL,
@@ -23,7 +23,7 @@ CREATE TABLE employees(
     id INT AUTO_INCREMENT,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
-    roles_id INT,
+    title_id INT,
     manager_id INT,
     PRIMARY KEY (id),
     FOREIGN KEY (manager_id) REFERENCES employees(id) 
