@@ -4,27 +4,22 @@ CREATE DATABASE developerTeam;
 USE developerTeam;
 
 CREATE TABLE department(
-    id INT AUTO_INCREMENT,
-    title_id INT,
-    department_name VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id)
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE title(
-    id INT AUTO_INCREMENT,
+CREATE TABLE roles(
+    id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30),
     salary DECIMAL,
     department_id INT,
-    PRIMARY KEY (id),
     FOREIGN KEY (department_id) REFERENCES department(id)
 );
 
 CREATE TABLE employees(
-    id INT AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
-    title_id INT,
-    manager_id INT,
-    PRIMARY KEY (id),
-    FOREIGN KEY (manager_id) REFERENCES employees(id) 
+    roles_id INT,
+    FOREIGN KEY (roles_id) REFERENCES roles(id) 
 );
