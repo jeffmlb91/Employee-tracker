@@ -13,5 +13,13 @@ The user should install all dependencies by running npm i
 ## Usage
 
 In order to run this application, user should use the command line and type node server.js and answer to the prompts listed. Please checkout the video as well:
-https://user-images.githubusercontent.com/66559059/152258695-474b11e8-a253-4edc-b4eb-2099e97f0d92.mov
+
+
+
+
+
+
+
+https://user-images.githubusercontent.com/66559059/152259025-c67c9f87-e972-4b28-aadb-29d18126e3c0.mov
+
 
